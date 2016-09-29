@@ -2,7 +2,8 @@ FROM ubuntu:16.04
 
 MAINTAINER github.com/Official-Registry/oracle-jdk, lizhongwen1989@gmail.com
 
-RUN apt-get install -y curl tar \
+RUN apt-get update -y \
+  && apt-get install -y curl tar \
   && cp -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 ENV JAVA_VERSION=1.8.0_92
